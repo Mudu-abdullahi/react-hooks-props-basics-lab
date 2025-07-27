@@ -1,8 +1,10 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { render, screen } from "@testing-library/react";
-
-import user from "../data/user";
 import App from "../components/App";
+import "@testing-library/jest-dom";
+import { user } from "../data/user"; // ✅ only import once
+
+
 
 test("renders without errors", () => {
   expect(() => render(<App />)).not.toThrow();
